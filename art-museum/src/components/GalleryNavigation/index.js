@@ -1,17 +1,17 @@
 import { NavLink } from "react-router-dom";
+import './GalleryNavigation.css'
 
 function GalleryNavigation({ galleries }) {
 
     const galleryList = galleries.map((gallery) => {
       return (
-        <>
-            <NavLink
-                to={`/galleries/${gallery.id}`}
-            >
-                {gallery.name}
-            </NavLink>
-            <br></br>
-        </>
+            <li key={gallery.id}>    
+                <NavLink
+                    to={`/galleries/${gallery.id}`}
+                >
+                    {gallery.name}
+                </NavLink>
+            </li> 
       );
     });
 
@@ -20,7 +20,7 @@ function GalleryNavigation({ galleries }) {
       <h1>Galleries</h1>
 
       <NavLink
-        to="/"
+        exact to="/"
       >
         Home
       </NavLink>
