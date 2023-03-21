@@ -6,9 +6,7 @@ function GalleryNavigation({ galleries }) {
     const galleryList = galleries.map((gallery) => {
       return (
             <li key={gallery.id}>    
-                <NavLink
-                    to={`/galleries/${gallery.id}`}
-                >
+                <NavLink to={`/galleries/${gallery.id}`}>
                     {gallery.name}
                 </NavLink>
             </li> 
